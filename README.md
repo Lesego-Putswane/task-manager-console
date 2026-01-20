@@ -56,4 +56,4 @@ Tasks are stored temporarily in memory and will be lost when the program exits.
 Input validation is included to prevent crashes due to invalid entries.
 Author
 
-[Your Name]
+[Lesego Putswane]
