@@ -4,7 +4,8 @@ def main():
     # greet user, and ask which option in the menu they would like to choose
     username = "lee wong".strip().capitalize() # must come back to this one
     print(f"Hello {username}! Hope you're doing well \n")
-    tasks = []
+    open_tasks = []
+    done_tasks = []
     
     while True:
         # prompt on desired menu choice
@@ -22,17 +23,23 @@ def main():
             case "1":
                 added_task = new_task()
                 print(f"{added_task}, has been added as a task \n")
-                tasks.append(added_task)
+                open_tasks.append(added_task)
             case "2":
-                if tasks == []:
-                    print("You have no open tasks \n")
+                if open_tasks == []:
+                    print("You have no open open_tasks \n")
                 else:
-                    for task in tasks:
+                    for task in open_tasks:
                         print(task)
             case "3":
-                mark_done()
+                task_choice = input("Which task would you like to mark done: \n")
+                if task_choice.lower() in open_tasks:
+                    open_tasks.remove(task_choice) 
+                    done_tasks.append(task_choice)
+                    print(f"{task_choice} has been removed. \nThese are your new tasks \n {open_tasks}")
+                else:
+                    print("Task does not exist")
             case "4":
-                view_completed_tasks()
+                pass
             case "5":
                 delete_tasks()
             case "6":
