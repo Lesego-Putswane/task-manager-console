@@ -21,10 +21,14 @@ def main():
         match user_choice:
             case "1":
                 added_task = new_task()
+                print(f"{added_task}, has been added as a task \n")
                 tasks.append(added_task)
-                print(f"{tasks} has been added as a task \n")
             case "2":
-                print(f"These are your current tasks: \n{tasks}")
+                if tasks == []:
+                    print("You have no open tasks \n")
+                else:
+                    for task in tasks:
+                        print(task)
             case "3":
                 mark_done()
             case "4":
