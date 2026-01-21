@@ -39,7 +39,9 @@ def main():
                 else:
                     print("Task does not exist")
             case "4":
-                pass
+                print("These are your done tasks:\n")
+                for done_task in done_tasks:
+                        print(done_task)
             case "5":
                 delete_tasks()
             case "6":
