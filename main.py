@@ -1,7 +1,6 @@
 from tasks import *
 
 def main():
-
     # greet user, and ask which option in the menu they would like to choose
     username = "lee wong".strip().capitalize() # must come back to this one
     print(f"Hello {username}! Hope you're doing well \n")
@@ -21,8 +20,9 @@ def main():
         user_choice = input("Enter your Menu Choice: \n")
         match user_choice:
             case "1":
-                new_task()
-                #tasks.append(new_task)
+                added_task = new_task()
+                tasks.append(added_task)
+                print(f"{tasks} has been added as a task \n")
             case "2":
                 view_task()
             case "3":
@@ -34,6 +34,6 @@ def main():
             case "6":
                 print("Session Terminated. Goodbye!")
                 exit()
-
+                
 main()
 

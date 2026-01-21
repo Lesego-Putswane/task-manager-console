@@ -19,4 +19,3 @@ def view_completed_tasks():
 def delete_tasks():
     pass
 
-new_task()
