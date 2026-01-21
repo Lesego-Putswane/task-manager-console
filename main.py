@@ -24,7 +24,7 @@ def main():
                 tasks.append(added_task)
                 print(f"{tasks} has been added as a task \n")
             case "2":
-                view_task()
+                print(f"These are your current tasks: \n{tasks}")
             case "3":
                 mark_done()
             case "4":
@@ -36,4 +36,3 @@ def main():
                 exit()
                 
 main()
-

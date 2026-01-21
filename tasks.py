@@ -7,9 +7,6 @@ def new_task():
                 print(
                     "Task Cannot be empty! Try again")
 
-def view_task():
-    pass
-
 def mark_done():
     pass
 
