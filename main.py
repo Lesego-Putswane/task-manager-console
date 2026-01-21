@@ -44,6 +44,13 @@ def main():
                         print(done_task)
             case "5":
                 delete_tasks()
+                delete = input("Would you like to delete done tasks? \n")
+                if delete == "yes" or delete == "y":
+                    done_tasks.clear()
+                elif delete == "no" or delete == "n":
+                    print("Done tasks not deleted")
+                else:
+                    print("invalid input!")
             case "6":
                 print("Session Terminated. Goodbye!")
                 exit()
