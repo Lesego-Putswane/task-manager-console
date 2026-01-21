@@ -1,9 +1,12 @@
+from tasks import *
+
 def main():
 
     # greet user, and ask which option in the menu they would like to choose
     username = "lee wong".strip().capitalize() # must come back to this one
     print(f"Hello {username}! Hope you're doing well \n")
-    menu = ["1", "2", "3", "4", "5", "6"]
+    task = []
+    
     
     while True:
         # prompt on desired menu choice
@@ -19,25 +22,18 @@ def main():
         user_choice = input("Enter your Menu Choice: \n")
         match user_choice:
             case "1":
-                print("1") # we'll later add code that goes into selected menu option for case 1 - 6
+                new_task()
             case "2":
-                print("2")
+                view_task()
             case "3":
-                print("3")
+                mark_done()
             case "4":
-                print("4")
+                view_completed_tasks()
             case "5":
-                print("5")
+                delete_tasks()
             case "6":
                 print("Session Terminated. Goodbye!")
                 exit()
 
 main()
 
-"""
-- Function to add task
-- Function to view pending tasks
-- Function to mark tasks done
-- Function to view completed tasks
-- Function to delete completed tasks
-"""
