@@ -5,8 +5,7 @@ def main():
     # greet user, and ask which option in the menu they would like to choose
     username = "lee wong".strip().capitalize() # must come back to this one
     print(f"Hello {username}! Hope you're doing well \n")
-    task = []
-    
+    tasks = []
     
     while True:
         # prompt on desired menu choice
@@ -23,6 +22,7 @@ def main():
         match user_choice:
             case "1":
                 new_task()
+                #tasks.append(new_task)
             case "2":
                 view_task()
             case "3":
