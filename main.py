@@ -32,7 +32,7 @@ def main():
                         print(task)
             case "3":
                 task_choice = input("Which task would you like to mark done: \n")
-                if task_choice.lower() in open_tasks:
+                if task_choice in open_tasks:
                     open_tasks.remove(task_choice) 
                     done_tasks.append(task_choice)
                     print(f"{task_choice} has been removed. \nThese are your new tasks \n {open_tasks}")
